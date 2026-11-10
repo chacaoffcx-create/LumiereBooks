@@ -1,0 +1,629 @@
+
+/* FINAL ADMIN COLOR HARMONIZATION — Lumière Books warm brown palette.
+   Loaded after every legacy stylesheet so old blue admin accents cannot leak through. */
+.redesign-admin {
+    --ash-navy: #704326;
+    --ash-blue: #a9784d;
+    --ash-blue-dark: #704326;
+    --ash-sky: #f3e5d8;
+    --ash-sky-soft: #fff8f1;
+    --ash-line: #ead8c8;
+    --ash-text: #4b2b19;
+    --ash-muted: #927963;
+    --admin-accent: #8a5834;
+    --admin-accent-soft: #f3e5d8;
+    --admin-focus: rgba(169,120,77,.22);
+}
+/* Icons: one coherent brown family across every admin page. */
+.redesign-admin .panel-heading h2 .ui-icon,
+.redesign-admin .admin-date .ui-icon,
+.redesign-admin .admin-search .ui-icon,
+.redesign-admin .admin-search-filter .ui-icon,
+.redesign-admin .filter-search .ui-icon,
+.redesign-admin .quick-actions a > .ui-icon,
+.redesign-admin .mini-stat-row .ui-icon,
+.redesign-admin .chart-empty .ui-icon,
+.redesign-admin .best-seller-cover-empty .ui-icon,
+.redesign-admin .admin-nav a .ui-icon,
+.redesign-admin .admin-nav a > svg,
+.redesign-admin .ui-icon {
+    color: #8a5834 !important;
+    stroke: currentColor !important;
+}
+.redesign-admin .admin-nav a .ui-icon,
+.redesign-admin .admin-nav a > svg {
+    color: #f3dfcb !important;
+}
+.redesign-admin .admin-nav a.active .ui-icon,
+.redesign-admin .admin-nav a.active > svg,
+.redesign-admin .admin-nav a.active svg * {
+    color: #fff !important;
+    stroke: currentColor !important;
+}
+.redesign-admin .panel-heading h2 .ui-icon {
+    color: #8a5834 !important;
+}
+/* Admin content surfaces, borders and muted copy. */
+.redesign-admin .admin-main,
+.redesign-admin .admin-content {
+    background: #fff8f1 !important;
+    color: #4b2b19;
+}
+.redesign-admin .admin-panel,
+.redesign-admin .admin-stat,
+.redesign-admin .admin-card,
+.redesign-admin .settings-card,
+.redesign-admin .settings-section,
+.redesign-admin .admin-form-card,
+.redesign-admin .table-card,
+.redesign-admin .admin-table-wrap {
+    border-color: #ead8c8 !important;
+}
+.redesign-admin .admin-content a:not(.button):not(.admin-nav a),
+.redesign-admin .admin-table a,
+.redesign-admin .dashboard-order-link,
+.redesign-admin .panel-heading > a,
+.redesign-admin .text-link {
+    color: #80502f !important;
+}
+.redesign-admin .admin-content a:not(.button):not(.admin-nav a):hover,
+.redesign-admin .admin-table a:hover,
+.redesign-admin .panel-heading > a:hover {
+    color: #4b2b19 !important;
+}
+/* Inputs, search fields, selects and upload areas. */
+.redesign-admin input:not([type="checkbox"]):not([type="radio"]),
+.redesign-admin select,
+.redesign-admin textarea,
+.redesign-admin .filter-search,
+.redesign-admin .admin-search-filter,
+.redesign-admin .admin-search,
+.redesign-admin .upload-preview,
+.redesign-admin .upload-box,
+.redesign-admin .file-upload-area {
+    border-color: #e5d2c0 !important;
+    color: #4b2b19 !important;
+}
+.redesign-admin input:focus,
+.redesign-admin select:focus,
+.redesign-admin textarea:focus,
+.redesign-admin .filter-search:focus-within,
+.redesign-admin .admin-search-filter:focus-within {
+    border-color: #a9784d !important;
+    box-shadow: 0 0 0 3px var(--admin-focus) !important;
+    outline: 0 !important;
+}
+.redesign-admin input::placeholder,
+.redesign-admin textarea::placeholder {
+    color: #a18a76 !important;
+    opacity: 1;
+}
+/* Buttons and action controls. */
+.redesign-admin .button-primary,
+.redesign-admin button.button-primary,
+.redesign-admin .admin-submit,
+.redesign-admin .btn-primary {
+    border-color: #704326 !important;
+    background: #704326 !important;
+    color: #fffaf5 !important;
+}
+.redesign-admin .button-primary:hover,
+.redesign-admin .admin-submit:hover,
+.redesign-admin .btn-primary:hover {
+    border-color: #4b2b19 !important;
+    background: #4b2b19 !important;
+}
+.redesign-admin .button-secondary,
+.redesign-admin .btn-secondary,
+.redesign-admin .action-button,
+.redesign-admin .button-outline {
+    border-color: #d9c1aa !important;
+    background: #fffaf5 !important;
+    color: #704326 !important;
+}
+.redesign-admin .button-secondary:hover,
+.redesign-admin .btn-secondary:hover,
+.redesign-admin .action-button:hover,
+.redesign-admin .button-outline:hover {
+    border-color: #a9784d !important;
+    background: #f4e8dc !important;
+    color: #4b2b19 !important;
+}
+/* Tags, filters, pagination and neutral information states. */
+.redesign-admin .filter-chip,
+.redesign-admin .pagination a,
+.redesign-admin .pagination button,
+.redesign-admin .page-link,
+.redesign-admin .tab-button,
+.redesign-admin .admin-tab {
+    border-color: #ead8c8 !important;
+    color: #704326 !important;
+}
+.redesign-admin .filter-chip.active,
+.redesign-admin .pagination .active,
+.redesign-admin .page-link.active,
+.redesign-admin .tab-button.active,
+.redesign-admin .admin-tab.active {
+    border-color: #8a5834 !important;
+    background: #8a5834 !important;
+    color: #fffaf5 !important;
+}
+.redesign-admin .alert-info,
+.redesign-admin .notice-info,
+.redesign-admin .info-box,
+.redesign-admin .empty-inline,
+.redesign-admin .mini-stat-row .ui-icon {
+    border-color: #ead8c8 !important;
+    background: #f7ede3 !important;
+    color: #704326 !important;
+}
+/* Remove blue from status variants while retaining distinct, readable states. */
+.redesign-admin .status-shipped,
+.redesign-admin .status-processing {
+    border-color: #e4c6a8 !important;
+    background: #f3e1cf !important;
+    color: #75451f !important;
+}
+.redesign-admin .status-delivered,
+.redesign-admin .status-completed,
+.redesign-admin .status-active {
+    border-color: #d8c2a9 !important;
+    background: #eee2d3 !important;
+    color: #5d452f !important;
+}
+.redesign-admin .status-pending,
+.redesign-admin .status-waiting {
+    border-color: #e8d2b8 !important;
+    background: #fbf0df !important;
+    color: #855522 !important;
+}
+.redesign-admin .status-cancelled,
+.redesign-admin .status-inactive {
+    border-color: #dfc4b9 !important;
+    background: #f2e3dc !important;
+    color: #87503b !important;
+}
+/* Tables and headings keep strong contrast against the cream surfaces. */
+.redesign-admin .admin-table thead th,
+.redesign-admin table thead th {
+    background: #f4e8dc !important;
+    color: #57351f !important;
+    border-color: #e8d7c7 !important;
+}
+.redesign-admin .admin-table tbody td,
+.redesign-admin table tbody td {
+    border-color: #f0e4d9 !important;
+}
+.redesign-admin .admin-content h1,
+.redesign-admin .admin-content h2,
+.redesign-admin .admin-content h3,
+.redesign-admin .panel-heading h2 {
+    color: #432716 !important;
+}
+.redesign-admin .admin-content p,
+.redesign-admin .admin-content small,
+.redesign-admin .admin-content .muted {
+    color: #8c7665;
+}
+/* Charts and dashboard decorative icons. */
+.redesign-admin .chart-empty .ui-icon {
+    color: #a9784d !important;
+}
+.redesign-admin .mini-stat-row .ui-icon {
+    background: #f3e5d8 !important;
+    color: #80502f !important;
+}
+.redesign-admin .category-admin-icon {
+    background: #a9784d !important;
+    color: #fffaf5 !important;
+}
+.redesign-admin .category-admin-icon .ui-icon {
+    color: #fffaf5 !important;
+    stroke: currentColor !important;
+}
+/* Keep semantic danger actions recognizable without introducing blue. */
+.redesign-admin .button-danger,
+.redesign-admin .btn-danger {
+    background: #8d5140 !important;
+    border-color: #8d5140 !important;
+    color: #fff !important;
+}
+/* CATEGORY MANAGER — match the warm chocolate category tiles used on the storefront.
+   Empty categories get a brown gradient instead of the legacy blue placeholder.
+   Uploaded category photos remain visible under a warm, readable overlay. */
+.redesign-admin .redesign-category-card {
+    overflow: hidden !important;
+    border: 1px solid #e4d0bd !important;
+    border-radius: 14px !important;
+    background: #fffaf5 !important;
+    box-shadow: 0 6px 18px rgba(75, 43, 25, .08) !important;
+}
+.redesign-admin .redesign-category-card .category-admin-art {
+    min-height: 175px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    padding: 20px 12px !important;
+    color: #fffaf5 !important;
+    text-align: center !important;
+    text-decoration: none !important;
+    background-color: #56321f !important;
+    background-position: center !important;
+    background-size: cover !important;
+}
+.redesign-admin .redesign-category-card .category-admin-art.category-art-placeholder {
+    background-image: radial-gradient(circle at 88% 14%, rgba(205, 153, 111, .17), transparent 34%),
+            linear-gradient(145deg, #382116 0%, #56321f 54%, #704326 100%) !important;
+}
+.redesign-admin .redesign-category-card:nth-child(4n+2) .category-admin-art.category-art-placeholder {
+    background-image: linear-gradient(145deg, #493020 0%, #754a30 100%) !important;
+}
+.redesign-admin .redesign-category-card:nth-child(4n+3) .category-admin-art.category-art-placeholder {
+    background-image: linear-gradient(145deg, #38251d 0%, #65402b 100%) !important;
+}
+.redesign-admin .redesign-category-card:nth-child(4n) .category-admin-art.category-art-placeholder {
+    background-image: linear-gradient(145deg, #593622 0%, #815638 100%) !important;
+}
+.redesign-admin .redesign-category-card .category-admin-art.has-category-image {
+    background-image: linear-gradient(180deg, rgba(45, 25, 16, .28), rgba(45, 25, 16, .82)),
+            var(--category-image) !important;
+}
+.redesign-admin .redesign-category-card .category-admin-icon {
+    width: 54px !important;
+    height: 54px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 0 5px !important;
+    border: 1px solid rgba(255, 250, 245, .34) !important;
+    border-radius: 16px !important;
+    background: rgba(255, 250, 245, .12) !important;
+    color: #fffaf5 !important;
+}
+.redesign-admin .redesign-category-card .category-admin-icon .ui-icon {
+    width: 30px !important;
+    height: 30px !important;
+    color: #fffaf5 !important;
+    stroke: currentColor !important;
+    stroke-width: 1.8 !important;
+}
+.redesign-admin .redesign-category-card .category-admin-art > b {
+    color: #fffaf5 !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    line-height: 1.35 !important;
+    text-shadow: 0 1px 3px rgba(30, 16, 10, .3) !important;
+}
+.redesign-admin .redesign-category-card .category-admin-art > small {
+    color: #f3dfcb !important;
+    font-size: 11px !important;
+    font-weight: 500 !important;
+}
+.redesign-admin .redesign-category-card .category-card-actions {
+    min-height: 52px !important;
+    background: #fffaf5 !important;
+    border-top: 1px solid #ead8c8 !important;
+}
+.redesign-admin .redesign-category-card .category-card-actions .action-button {
+    width: 34px !important;
+    height: 34px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border: 1px solid #dfc8b3 !important;
+    border-radius: 9px !important;
+    background: #fffaf5 !important;
+    color: #704326 !important;
+}
+.redesign-admin .redesign-category-card .category-card-actions .action-button.danger {
+    color: #965744 !important;
+    border-color: #e5cfc3 !important;
+}
+.redesign-admin .redesign-category-card .category-card-actions .action-button:hover {
+    background: #f3e5d8 !important;
+    border-color: #b98b65 !important;
+}
+/* v12.6 CATEGORY PAGE LAYOUT REPAIR
+   Explicitly override legacy .admin-category-card flex-row rules.
+   Keep artwork and action buttons in separate, full-width rows. */
+.redesign-admin .category-manager-layout {
+    grid-template-columns: minmax(0, 1fr) 340px !important;
+    gap: 18px !important;
+    min-width: 0 !important;
+}
+.redesign-admin .category-manager-main {
+    min-width: 0 !important;
+    width: 100% !important;
+}
+.redesign-admin .admin-toolbar-row {
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    width: 100% !important;
+    min-width: 0 !important;
+}
+.redesign-admin .admin-toolbar-row .admin-search-filter {
+    flex: 1 1 0 !important;
+    width: auto !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    overflow: hidden !important;
+}
+.redesign-admin .admin-toolbar-row .admin-search-filter > span {
+    flex: 0 0 18px !important;
+    width: 18px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+}
+.redesign-admin .admin-toolbar-row .admin-search-filter input {
+    flex: 1 1 auto !important;
+    width: 1% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+}
+.redesign-admin .admin-toolbar-row > .button {
+    flex: 0 0 auto !important;
+    width: auto !important;
+    white-space: nowrap !important;
+}
+.redesign-admin .redesign-category-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    align-items: stretch !important;
+    gap: 14px !important;
+    min-width: 0 !important;
+}
+.redesign-admin .redesign-category-card {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    justify-content: flex-start !important;
+    gap: 0 !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+}
+.redesign-admin .redesign-category-card > .category-admin-art {
+    display: flex !important;
+    flex: 1 1 auto !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    min-height: 158px !important;
+    box-sizing: border-box !important;
+}
+.redesign-admin .redesign-category-card > .category-card-actions {
+    display: flex !important;
+    flex: 0 0 auto !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    min-height: 54px !important;
+    gap: 12px !important;
+    padding: 9px 8px !important;
+    box-sizing: border-box !important;
+}
+.redesign-admin .redesign-category-card .category-card-actions form {
+    display: flex !important;
+    flex: 0 0 auto !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.redesign-admin .redesign-category-card .category-card-actions .action-button {
+    flex: 0 0 34px !important;
+    width: 34px !important;
+    min-width: 34px !important;
+    height: 34px !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+}
+@media (max-width: 1200px) {
+    .redesign-admin .redesign-category-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+}
+@media (max-width: 900px) {
+    .redesign-admin .category-manager-layout {
+        grid-template-columns: minmax(0, 1fr) !important;
+    }
+}
+@media (max-width: 560px) {
+    .redesign-admin .redesign-category-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 9px !important;
+    }
+    .redesign-admin .admin-toolbar-row {
+        align-items: stretch !important;
+        flex-direction: column !important;
+    }
+    .redesign-admin .admin-toolbar-row > .button {
+        width: 100% !important;
+    }
+}
+/* v12.7 — final category toolbar alignment and visible add icon */
+.redesign-admin .category-manager-main {
+    min-width: 0 !important;
+    width: 100% !important;
+}
+.redesign-admin .category-manager-main > .admin-toolbar-row {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) auto !important;
+    align-items: center !important;
+    gap: 14px !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 0 16px !important;
+}
+.redesign-admin .category-manager-main > .admin-toolbar-row > form.admin-search-filter {
+    position: relative !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 12px !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    height: 48px !important;
+    margin: 0 !important;
+    padding: 0 15px !important;
+    box-sizing: border-box !important;
+    overflow: visible !important;
+}
+.redesign-admin .category-manager-main .category-search-icon {
+    position: static !important;
+    display: inline-flex !important;
+    flex: 0 0 22px !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 22px !important;
+    min-width: 22px !important;
+    height: 22px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+    line-height: 1 !important;
+}
+.redesign-admin .category-manager-main .category-search-icon svg,
+.redesign-admin .category-manager-main .category-search-icon .ui-icon {
+    display: block !important;
+    flex: 0 0 20px !important;
+    width: 20px !important;
+    min-width: 20px !important;
+    height: 20px !important;
+    color: #80502f !important;
+    stroke: currentColor !important;
+}
+.redesign-admin .category-manager-main .admin-search-filter input[type="search"] {
+    position: static !important;
+    display: block !important;
+    flex: 1 1 0 !important;
+    width: 0 !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    outline: 0 !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    color: #4b2b19 !important;
+    font-size: 13px !important;
+    line-height: normal !important;
+}
+.redesign-admin .category-manager-main .admin-search-filter input[type="search"]::-webkit-search-cancel-button {
+    cursor: pointer;
+}
+.redesign-admin .category-manager-main > .admin-toolbar-row > a.button {
+    display: inline-flex !important;
+    flex: 0 0 auto !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 9px !important;
+    width: auto !important;
+    min-width: 174px !important;
+    min-height: 48px !important;
+    margin: 0 !important;
+    padding: 0 18px !important;
+    box-sizing: border-box !important;
+    white-space: nowrap !important;
+    color: #fffaf5 !important;
+    background: #754331 !important;
+    border: 1px solid #754331 !important;
+    border-radius: 10px !important;
+    text-decoration: none !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    line-height: 1 !important;
+}
+.redesign-admin .category-manager-main .category-add-icon {
+    display: inline-flex !important;
+    flex: 0 0 18px !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 18px !important;
+    height: 18px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    color: #fffaf5 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+.redesign-admin .category-manager-main .category-add-icon svg,
+.redesign-admin .category-manager-main .category-add-icon .ui-icon {
+    display: block !important;
+    width: 18px !important;
+    height: 18px !important;
+    min-width: 18px !important;
+    color: #fffaf5 !important;
+    stroke: currentColor !important;
+    stroke-width: 2.4 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+.redesign-admin .category-manager-main > .admin-toolbar-row > a.button:hover {
+    background: #603522 !important;
+    border-color: #603522 !important;
+}
+@media (max-width: 620px) {
+    .redesign-admin .category-manager-main > .admin-toolbar-row {
+        grid-template-columns: minmax(0, 1fr) !important;
+    }
+    .redesign-admin .category-manager-main > .admin-toolbar-row > a.button {
+        width: 100% !important;
+    }
+}
+/* v12.8 — render uploaded category artwork as a real image element. */
+.redesign-admin .redesign-category-card .category-admin-art.has-category-image {
+    position: relative !important;
+    isolation: isolate !important;
+    overflow: hidden !important;
+    background-color: #56321f !important;
+    background-image: none !important;
+}
+.redesign-admin .redesign-category-card .category-admin-art .category-card-photo {
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 0 !important;
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-width: 100% !important;
+    min-height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: none !important;
+}
+.redesign-admin .redesign-category-card .category-admin-art.has-category-image::after {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 1 !important;
+    display: block !important;
+    background: linear-gradient(180deg, rgba(45, 25, 16, .20), rgba(45, 25, 16, .76)) !important;
+    pointer-events: none !important;
+}
+.redesign-admin .redesign-category-card .category-admin-art.has-category-image > .category-admin-icon,
+.redesign-admin .redesign-category-card .category-admin-art.has-category-image > b,
+.redesign-admin .redesign-category-card .category-admin-art.has-category-image > small {
+    position: relative !important;
+    z-index: 2 !important;
+}

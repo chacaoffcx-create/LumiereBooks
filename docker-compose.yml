@@ -1,0 +1,40 @@
+services:
+  app:
+    build: .
+    ports:
+      - "8080:80"
+    environment:
+      APP_ENV: local
+      APP_URL: http://localhost:8080
+      APP_TIMEZONE: Asia/Jakarta
+      DB_HOST: db
+      DB_PORT: 3306
+      DB_NAME: lumiere_books
+      DB_USER: lumiere_books
+      DB_PASS: lumiere_books_local_password
+    depends_on:
+      db:
+        condition: service_healthy
+    volumes:
+      - ./public/uploads:/var/www/html/public/uploads
+
+  db:
+    image: mysql:8.0
+    environment:
+      MYSQL_DATABASE: lumiere_books
+      MYSQL_USER: lumiere_books
+      MYSQL_PASSWORD: lumiere_books_local_password
+      MYSQL_ROOT_PASSWORD: root_local_password
+    ports:
+      - "3307:3306"
+    volumes:
+      - lumiere_books_db:/var/lib/mysql
+      - ./database/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql:ro
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-proot_local_password"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+volumes:
+  lumiere_books_db:

@@ -1,0 +1,40 @@
+LUMIERE BOOKS — PANDUAN SINGKAT
+(Bingung file-nya di mana? Baca PETA-FOLDER.txt)
+
+1. Ekstrak folder lumiere-books ke folder htdocs XAMPP.
+2. Jalankan Apache dan MySQL.
+3. Buka phpMyAdmin, buat/import database dengan file database/schema.sql.
+   File SQL sudah membuat database bernama lumiere_books.
+4. Salin .env.example menjadi .env.
+5. Pastikan DB_NAME=lumiere_books, DB_USER=root, DB_PASS= (kosong) sesuai XAMPP standar.
+6. Buka http://localhost/lumiere-books/public/
+
+AKUN DEMO
+Admin:
+Email: admin@lumierebooks.local
+Password: LumiereAdmin123!
+
+Pelanggan:
+Email: user@lumierebooks.local
+Password: LumiereUser123!
+
+PEMBAYARAN
+Pilih Transfer Bank BCA atau BRI untuk menguji simulasi berhasil/gagal.
+COD tersedia untuk pembayaran saat paket diterima.
+Semua pembayaran hanya simulasi untuk praktik USK, bukan transaksi sungguhan.
+
+Admin dapat mengatur status pesanan, kurir, dan nomor resi melalui menu Pesanan.
+Pelanggan dapat melihat status dan resi pada menu Pesanan Saya.
+
+Jika folder proyek tidak bernama lumiere-books, sesuaikan APP_URL pada file .env.
+Jangan impor ulang schema.sql ke database yang sudah berisi data karena schema.sql membuat ulang tabel.
+
+
+PEMBARUAN METODE PEMBAYARAN (VERSI 8 NOVEMBER 2026)
+- Transfer bank simulasi: BCA dan BRI.
+- Dompet digital simulasi melalui QRIS: DANA, OVO, dan GoPay.
+- COD tetap tersedia.
+- Jika database lama sudah pernah diimpor, buka phpMyAdmin > pilih database Lumiere Books > tab Import, lalu impor file:
+  database/migrations/2026-11-08-add-qris-wallet-payment.sql
+- Jalankan migrasi satu kali saja. Jika membuat database baru dari awal, gunakan database/schema.sql terbaru dan migrasi tidak perlu dijalankan.
+- Semua opsi bank/dompet digital pada proyek praktik ini merupakan SIMULASI, bukan transaksi uang sungguhan.

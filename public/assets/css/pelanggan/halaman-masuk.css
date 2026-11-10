@@ -1,0 +1,628 @@
+
+/* Full-screen Lumière Books login page */
+body.page-login {
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: #fbefe3;
+}
+body.page-login .site-header, body.page-login .site-footer {
+    display: none!important;
+}
+body.page-login main {
+    min-height: 100vh;
+}
+body.page-login .flash-stack {
+    position: absolute;
+    z-index: 10;
+    top: 10px;
+    right: 3%;
+    width: min(560px,44%);
+    padding: 0;
+}
+.lumiere-login-page {
+    min-height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 47.4% 52.6%;
+    background: #fbefe3;
+    color: #4a230d;
+}
+.lumiere-login-photo {
+    min-height: 100vh;
+    background-image: url("../../images/login-reading-corner.jpg");
+    background-size: cover;
+    background-position: center center;
+    border-radius: 0 0 70px 0;
+}
+.lumiere-login-panel {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 48px clamp(34px,7.2vw,112px);
+    background: #fbefe3;
+}
+.lumiere-login-content {
+    width: min(100%,610px);
+    position: relative;
+    z-index: 2;
+}
+.lumiere-login-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin: 0 auto 24px;
+    color: #4a230d;
+    text-decoration: none;
+}
+.lumiere-login-brand img {
+    width: 78px;
+    height: 78px;
+    object-fit: contain;
+}
+.lumiere-login-brand span {
+    font-family: "Playfair Display",Georgia,serif;
+    font-size: clamp(25px,3vw,38px);
+    line-height: 1.1;
+    font-weight: 700;
+    letter-spacing: -.7px;
+}
+.lumiere-login-heading {
+    text-align: center;
+    margin-bottom: 28px;
+}
+.lumiere-login-heading h1 {
+    color: #4a230d;
+    font-family: "Playfair Display",Georgia,serif;
+    font-size: clamp(30px,3.2vw,44px);
+    line-height: 1.16;
+    margin: 0 0 10px;
+    font-weight: 700;
+}
+.lumiere-login-heading p {
+    color: #68452e;
+    font-size: clamp(14px,1.45vw,19px);
+    line-height: 1.55;
+    margin: 0;
+}
+.lumiere-login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.lumiere-login-field {
+    min-height: 66px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 0 22px;
+    border: 1px solid #ead8c6;
+    border-radius: 23px;
+    background: rgba(255,250,245,.78);
+    box-shadow: 0 2px 7px rgba(92,48,20,.035);
+}
+.lumiere-login-field:focus-within {
+    border-color: #b77b4d;
+    box-shadow: 0 0 0 3px rgba(183,123,77,.12);
+}
+.lumiere-login-field .field-icon {
+    width: 24px;
+    height: 24px;
+    flex: 0 0 24px;
+    color: #572b12;
+    display: grid;
+    place-items: center;
+    font-size: 22px;
+}
+.lumiere-login-field .field-icon svg,.lumiere-login-field .password-visibility svg {
+    width: 23px;
+    height: 23px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.9;
+}
+.lumiere-login-field input {
+    width: 100%;
+    min-width: 0;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: #4a230d;
+    font: 500 19px "DM Sans",Arial,sans-serif;
+}
+.lumiere-login-field input::placeholder {
+    color: #806047;
+    opacity: 1;
+}
+.password-visibility {
+    flex: 0 0 28px;
+    width: 28px;
+    height: 32px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: #572b12;
+    display: grid;
+    place-items: center;
+}
+.lumiere-login-options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin: 4px 2px 0;
+    color: #542d16;
+    font-size: 16px;
+    font-weight: 600;
+}
+.remember-option {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+}
+.remember-option input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+.custom-check {
+    width: 27px;
+    height: 27px;
+    border: 2px solid #653719;
+    border-radius: 6px;
+    background: rgba(255,255,255,.35);
+    display: inline-block;
+    position: relative;
+}
+.remember-option input:checked + .custom-check {
+    background: #57290e;
+    border-color: #57290e;
+}
+.remember-option input:checked + .custom-check::after {
+    content: "";
+    position: absolute;
+    left: 7px;
+    top: 3px;
+    width: 7px;
+    height: 13px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+.lumiere-login-options a {
+    color: #8b4c20;
+    text-decoration: none;
+}
+.lumiere-login-options a:hover,.lumiere-register-link:hover {
+    text-decoration: underline;
+}
+.lumiere-login-submit {
+    min-height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 4px;
+    border: 0;
+    border-radius: 24px;
+    background: #4a2109;
+    color: #fffaf4;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 5px 12px rgba(74,33,9,.12);
+    transition: background .2s,transform .2s;
+}
+.lumiere-login-submit:hover {
+    background: #6b3514;
+    transform: translateY(-1px);
+}
+.lumiere-login-submit span:last-child {
+    font-size: 28px;
+    line-height: 1;
+}
+.lumiere-login-divider {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    color: #603719;
+    font-size: 19px;
+    font-weight: 600;
+    margin: 3px 0 0;
+}
+.lumiere-login-divider::before,.lumiere-login-divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #e5d2bf;
+}
+.lumiere-register-link {
+    min-height: 62px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    border: 1.5px solid #693a1c;
+    border-radius: 22px;
+    color: #5b2f13;
+    text-decoration: none;
+    font-size: 19px;
+    font-weight: 700;
+    background: rgba(255,248,240,.32);
+}
+.lumiere-register-link span {
+    font-size: 23px;
+}
+.lumiere-register-link .login-user-icon {
+    width: 25px;
+    height: 25px;
+    flex: 0 0 25px;
+    display: block;
+    color: currentColor;
+}
+.lumiere-login-decoration {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 180px;
+    height: 170px;
+    pointer-events: none;
+    color: #d7a66e;
+    opacity: .65;
+}
+.decoration-leaf {
+    position: absolute;
+    right: 45px;
+    top: 8px;
+    font-size: 75px;
+    transform: rotate(-20deg);
+}
+.decoration-books {
+    position: absolute;
+    right: 22px;
+    bottom: 7px;
+    font-size: 90px;
+    transform: rotate(-8deg);
+}
+@media(max-width:900px) {
+    .lumiere-login-page {
+        grid-template-columns: 42% 58%;
+    }
+    .lumiere-login-panel {
+        padding: 36px 28px;
+    }
+    .lumiere-login-brand img {
+        width: 62px;
+        height: 62px;
+    }
+    .lumiere-login-field {
+        min-height: 58px;
+        border-radius: 19px;
+    }
+    .lumiere-login-field input {
+        font-size: 16px;
+    }
+}
+@media(max-width:640px) {
+    body.page-login {
+        overflow-y: auto;
+    }
+    .lumiere-login-page {
+        min-height: 100svh;
+        display: flex;
+        flex-direction: column;
+    }
+    .lumiere-login-photo {
+        min-height: 31svh;
+        height: 31svh;
+        width: 100%;
+        border-radius: 0 0 34px 0;
+        background-position: center 48%;
+    }
+    .lumiere-login-panel {
+        min-height: 69svh;
+        padding: 27px 22px 42px;
+        align-items: flex-start;
+    }
+    .lumiere-login-brand {
+        margin-bottom: 16px;
+        gap: 8px;
+    }
+    .lumiere-login-brand img {
+        width: 52px;
+        height: 52px;
+    }
+    .lumiere-login-brand span {
+        font-size: 26px;
+    }
+    .lumiere-login-heading {
+        margin-bottom: 20px;
+    }
+    .lumiere-login-heading h1 {
+        font-size: 29px;
+    }
+    .lumiere-login-heading p {
+        font-size: 13px;
+    }
+    .desktop-break {
+        display: none;
+    }
+    .lumiere-login-form {
+        gap: 13px;
+    }
+    .lumiere-login-field {
+        min-height: 54px;
+        padding: 0 16px;
+        gap: 11px;
+    }
+    .lumiere-login-field input {
+        font-size: 15px;
+    }
+    .lumiere-login-options {
+        font-size: 13px;
+    }
+    .custom-check {
+        width: 22px;
+        height: 22px;
+    }
+    .remember-option input:checked + .custom-check::after {
+        left: 5px;
+        top: 2px;
+    }
+    .lumiere-login-submit {
+        min-height: 53px;
+        border-radius: 18px;
+        font-size: 17px;
+    }
+    .lumiere-login-divider {
+        font-size: 15px;
+    }
+    .lumiere-register-link {
+        min-height: 53px;
+        border-radius: 18px;
+        font-size: 16px;
+    }
+    .lumiere-login-decoration {
+        width: 105px;
+        height: 100px;
+        opacity: .35;
+    }
+    .decoration-leaf {
+        font-size: 46px;
+        right: 26px;
+    }
+    .decoration-books {
+        font-size: 58px;
+        right: 8px;
+    }
+    body.page-login .flash-stack {
+        position: relative;
+        top: auto;
+        right: auto;
+        width: auto;
+        margin: 0 16px;
+        padding-top: 8px;
+    }
+}
+/* Registration uses the same Lumière login visual language */
+body.page-register {
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: #fbefe3;
+}
+body.page-register .site-header, body.page-register .site-footer {
+    display: none!important;
+}
+body.page-register main {
+    min-height: 100vh;
+}
+body.page-register .flash-stack {
+    position: absolute;
+    z-index: 10;
+    top: 10px;
+    right: 3%;
+    width: min(560px,44%);
+    padding: 0;
+}
+.lumiere-register-page .lumiere-login-panel {
+    padding-top: 26px;
+    padding-bottom: 26px;
+}
+.lumiere-register-page .lumiere-login-content {
+    width: min(100%,570px);
+}
+.lumiere-register-page .lumiere-login-brand {
+    margin-bottom: 12px;
+}
+.lumiere-register-page .lumiere-login-brand img {
+    width: 60px;
+    height: 60px;
+}
+.lumiere-register-page .lumiere-login-brand span {
+    font-size: clamp(25px,2.7vw,34px);
+}
+.lumiere-register-page .lumiere-login-heading {
+    margin-bottom: 17px;
+}
+.lumiere-register-page .lumiere-login-heading h1 {
+    font-size: clamp(29px,3vw,39px);
+    margin-bottom: 7px;
+}
+.lumiere-register-page .lumiere-login-heading p {
+    font-size: 15px;
+}
+.lumiere-register-form {
+    gap: 12px;
+}
+.lumiere-register-form .lumiere-login-field {
+    min-height: 56px;
+    border-radius: 19px;
+}
+.lumiere-register-form .lumiere-login-field input {
+    font-size: 16px;
+}
+.lumiere-register-form .lumiere-login-submit {
+    min-height: 54px;
+    margin-top: 1px;
+    border-radius: 19px;
+    font-size: 18px;
+}
+.lumiere-register-form .lumiere-login-divider {
+    font-size: 16px;
+}
+.lumiere-register-form .lumiere-register-link {
+    min-height: 54px;
+    border-radius: 19px;
+    font-size: 16px;
+}
+@media(max-width:900px) {
+    .lumiere-register-page .lumiere-login-panel {
+        padding: 24px 25px;
+    }
+    .lumiere-register-page .lumiere-login-brand img {
+        width: 54px;
+        height: 54px;
+    }
+    .lumiere-register-form .lumiere-login-field {
+        min-height: 52px;
+    }
+}
+@media(max-width:640px) {
+    body.page-register {
+        overflow-y: auto;
+    }
+    .lumiere-register-page {
+        min-height: 100svh;
+    }
+    .lumiere-register-page .lumiere-login-photo {
+        min-height: 24svh;
+        height: 24svh;
+    }
+    .lumiere-register-page .lumiere-login-panel {
+        min-height: 76svh;
+        padding: 22px 20px 34px;
+    }
+    .lumiere-register-page .lumiere-login-brand {
+        margin-bottom: 12px;
+    }
+    .lumiere-register-page .lumiere-login-brand img {
+        width: 48px;
+        height: 48px;
+    }
+    .lumiere-register-page .lumiere-login-brand span {
+        font-size: 25px;
+    }
+    .lumiere-register-page .lumiere-login-heading {
+        margin-bottom: 16px;
+    }
+    .lumiere-register-page .lumiere-login-heading h1 {
+        font-size: 28px;
+    }
+    .lumiere-register-page .lumiere-login-heading p {
+        font-size: 13px;
+    }
+    .lumiere-register-form {
+        gap: 11px;
+    }
+    .lumiere-register-form .lumiere-login-field {
+        min-height: 51px;
+        padding: 0 14px;
+    }
+    .lumiere-register-form .lumiere-login-field input {
+        font-size: 14px;
+    }
+    .lumiere-register-form .lumiere-login-submit {
+        min-height: 51px;
+        font-size: 16px;
+    }
+    .lumiere-register-form .lumiere-register-link {
+        min-height: 50px;
+        font-size: 14px;
+    }
+    body.page-register .flash-stack {
+        position: relative;
+        top: auto;
+        right: auto;
+        width: auto;
+        margin: 0 16px;
+        padding-top: 8px;
+    }
+}
+/* Final auth consistency: remove decorative book/star and unify typography */
+body.page-login .lumiere-login-decoration,
+body.page-register .lumiere-login-decoration {
+    display: none !important;
+}
+/* Desktop/tablet typography is identical on login and registration */
+.lumiere-register-page .lumiere-login-brand {
+    margin-bottom: 24px;
+    gap: 12px;
+}
+.lumiere-register-page .lumiere-login-brand img {
+    width: 78px;
+    height: 78px;
+}
+.lumiere-register-page .lumiere-login-brand span {
+    font-size: clamp(25px, 3vw, 38px);
+}
+.lumiere-register-page .lumiere-login-heading {
+    margin-bottom: 28px;
+}
+.lumiere-register-page .lumiere-login-heading h1 {
+    font-size: clamp(30px, 3.2vw, 44px);
+}
+.lumiere-register-page .lumiere-login-heading p {
+    font-size: clamp(14px, 1.45vw, 19px);
+}
+.lumiere-register-form .lumiere-login-field input {
+    font: 500 19px "DM Sans", Arial, sans-serif;
+}
+.lumiere-register-form .lumiere-login-submit {
+    font-size: 20px;
+}
+.lumiere-register-form .lumiere-register-link {
+    font-size: 19px;
+}
+@media(max-width:900px) {
+    .lumiere-register-page .lumiere-login-brand img {
+        width: 62px;
+        height: 62px;
+    }
+}
+@media(max-width:640px) {
+    /* Match the mobile login font sizes exactly as well */
+    .lumiere-register-page .lumiere-login-brand {
+        margin-bottom: 16px;
+        gap: 8px;
+    }
+    .lumiere-register-page .lumiere-login-brand img {
+        width: 52px;
+        height: 52px;
+    }
+    .lumiere-register-page .lumiere-login-brand span {
+        font-size: 26px;
+    }
+    .lumiere-register-page .lumiere-login-heading {
+        margin-bottom: 20px;
+    }
+    .lumiere-register-page .lumiere-login-heading h1 {
+        font-size: 29px;
+    }
+    .lumiere-register-page .lumiere-login-heading p {
+        font-size: 13px;
+    }
+    .lumiere-register-form .lumiere-login-field input {
+        font: 500 15px "DM Sans", Arial, sans-serif;
+    }
+    .lumiere-register-form .lumiere-login-submit {
+        font-size: 17px;
+    }
+    .lumiere-register-form .lumiere-register-link {
+        font-size: 16px;
+    }
+}
